@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../../layouts/Layout.astro";
+
+import Introduction from "./_components/Introduction.vue";
+import Title from "./_components/Title.vue";
+
+import Fa6RegularNoteSticky from "./_components/icons/Fa6RegularNoteSticky.vue";
+import MdiDot from "./_components/icons/MdiDot.vue";
+import SimpleLineIconsCloudDownload from "./_components/icons/SimpleLineIconsCloudDownload.vue";
+---
+
+<Layout title="About">
+  <main transition:animate="slide">
+    <div class="my-36 space-y-16">
+      <div class="space-y-8">
+        <Title>Create. Share. Repeat.</Title>
+        <div class="space-y-8">
+          <div class="flex gap-14">
+            <Image
+              src="https://avatars.githubusercontent.com/u/56282560?v=4"
+              class="rounded-xl"
+              loading="eager"
+              width="290"
+              height="290"
+              alt="profile"
+            />
+            <Introduction />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold text-[#192831] dark:text-[#717175]">
+          Bio
+        </h2>
+        <div class="space-y-4">
+          <p class="text-base text-[#192831] dark:text-[#8F999E] leading-9">
+            This is made for journalists, podcast hosts, and event organizers to
+            copy-and-paste.
+          </p>
+          <div class="border-l-4 border-[#8F999E] pl-8">
+            <p
+              class="text-base text-[#192831] dark:text-[hsl(200,7%,59%)] leading-9"
+            >
+              Agung Maulana is a Indonesian programmer. He currently lives in
+              Tanah Abang, Jakarta Selatan. His lifelong appreciation for
+              building software and sharing knowledge led him to speak in over
+              110 conferences worldwide. His passion for open source put him on
+              the top 20 most active users on GitHub at age 22. Before moving to
+              the US, Zeno developed multiple applications, mentored startups,
+              and worked at major companies in Latin America, such as Globo and
+              Petrobras.
+            </p>
+          </div>
+        </div>
+        <div class="my-6 flex items-center">
+          <button
+            type="button"
+            class="py-2 px-3 items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent disabled:opacity-50 disabled:pointer-events-none inline-flex gap-3 bg-transparent hover:bg-[#212024] text-[#192831] dark:text-white"
+          >
+            <Fa6RegularNoteSticky />
+            Copy Bio
+          </button>
+          <MdiDot class="text-[#192831] dark:text-white" />
+          <button
+            class="py-2 px-3 items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent disabled:opacity-50 disabled:pointer-events-none inline-flex gap-3 bg-transparent hover:bg-[#212024] text-[#192831] dark:text-white"
+          >
+            <SimpleLineIconsCloudDownload />
+            Copy Headshot
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
