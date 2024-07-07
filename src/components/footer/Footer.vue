@@ -7,7 +7,8 @@ defineComponent({
 </script>
 
 <template>
-  <div class="p-6 w-full fixed bottom-0 flex justify-center gap-6 text-white text-sm border-transparent bg-transparent">
+  <div
+    class="p-6 w-full flex justify-center gap-6 text-[#192831] dark:text-white text-sm border-transparent bg-transparent">
     <a href="/email"><span>email</span></a>
     <a href="/twitter"><span>twitter</span></a>
     <a href="/github"><span>github</span></a>
