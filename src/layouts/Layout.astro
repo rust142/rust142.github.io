@@ -27,17 +27,22 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-slate-200 dark:bg-[#121C22] font-regular">
-    <a href="/" class="fixed top-6 left-8 px-4 py-2 cursor-pointer"
-      ><span class="font-bold text-xl text-[#192831] dark:text-white">A</span
-      ></a
-    >
-    <Navigation client:only />
-    <ToogleTheme client:load />
-    <div class="flex justify-center">
-      <div class="w-full max-w-3xl">
-        <slot />
+    <div class="min-h-screen flex justify-between flex-col">
+      <div>
+        <a href="/" class="fixed top-6 left-8 px-4 py-2 cursor-pointer"
+          ><span class="font-bold text-xl text-[#192831] dark:text-white"
+            >A</span
+          ></a
+        >
+        <Navigation client:only />
+        <ToogleTheme client:only />
       </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-3xl">
+          <slot />
+        </div>
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </body>
 </html>
