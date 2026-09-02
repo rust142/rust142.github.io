@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+.vercel/
+graphify-out/
+.geeto/
+coverage/
+*.lock
+.env
+.vscode/
+.idea/
+*.swp
+.eslintignore
+eslint.config.js
+.prettierrc.cjs
+CHANGELOG.md
